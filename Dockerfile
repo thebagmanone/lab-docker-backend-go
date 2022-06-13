@@ -10,7 +10,7 @@ RUN go mod download
 COPY . .
 RUN go build main.go
 
-FROM nginx
+FROM scratch
 COPY --from=builder /go/src .
 
 ENTRYPOINT  ["./main"]
