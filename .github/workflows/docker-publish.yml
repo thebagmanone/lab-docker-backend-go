@@ -1,4 +1,4 @@
-name: ci3
+name: ci4
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: name/app
+          images: thebagmanone/lab-docker-backend-go
       -
         name: Login to DockerHub
         if: github.event_name != 'pull_request'
